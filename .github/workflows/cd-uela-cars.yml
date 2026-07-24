@@ -1,0 +1,36 @@
+name: deploy-uela-cars
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v5
+
+      - name: configure pages
+        uses: actions/configure-pages@v5
+
+      - name: upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
