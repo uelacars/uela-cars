@@ -7,6 +7,7 @@ on:
 
 jobs:
 
+  
   code-quality:
     name: Check Code Quality
     runs-on: ubuntu-latest
@@ -20,17 +21,19 @@ jobs:
           ls -la
           echo "Checking HTML CSS JS files..."
 
+      - name: Install HTML validator
+        run: npm install -g html-validate
+
       - name: Validate HTML
-        uses: Cyb3r-Jak3/html5validator-action@v7
-        with:
-          root: .
+        run: html-validate index.html
 
       - name: Check JavaScript syntax
-        run: |
-          node --check main.js
+        run: node --check main.js
 
 
+  # CD - Deploy to GitHub Pages
   deploy:
+    name: Deploy Website
     needs: code-quality
     runs-on: ubuntu-latest
 
@@ -45,17 +48,17 @@ jobs:
 
     steps:
 
-      - name: checkout
+      - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: configure pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: upload website
+      - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
-      - name: deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
