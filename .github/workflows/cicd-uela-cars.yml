@@ -6,7 +6,32 @@ on:
       - main
 
 jobs:
+
+  code-quality:
+    name: Check Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Check project files
+        run: |
+          ls -la
+          echo "Checking HTML CSS JS files..."
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v7
+        with:
+          root: .
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check main.js
+
+
   deploy:
+    needs: code-quality
     runs-on: ubuntu-latest
 
     permissions:
