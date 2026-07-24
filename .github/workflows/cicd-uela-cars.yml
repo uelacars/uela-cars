@@ -5,39 +5,125 @@ on:
     branches:
       - main
 
+  # workflow_dispatch:
+  # Manuali 
+
 jobs:
 
-  
+  code-quality:
 
+    name: Check Website Quality
 
-  # CD - Deploy to GitHub Pages
-  deploy:
-    name: Deploy Website
-    needs: code-quality
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
 
       - name: Checkout repository
         uses: actions/checkout@v5
 
+
+      - name: Check project structure
+        run: |
+          ls -la
+          echo "Checking HTML CSS JS files..."
+
+
+      - name: Install HTML validator
+        run: npm install -g html-validate
+
+
+      - name: Validate HTML
+        run: html-validate index.html
+
+
+      - name: Check JavaScript syntax
+        run: node --check main.js
+
+
+
+  docker-test:
+
+    name: Build Docker Image
+
+    needs: code-quality
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+
+      - name: Build Docker image
+        run: |
+          docker build -t uela-cars .
+
+
+      - name: Test Docker image
+        run: |
+          docker run -d -p 8080:80 --name uela uela-cars
+
+          sleep 5
+
+          curl http://localhost:8080
+
+
+
+
+  deploy:
+
+    name: Deploy Website
+
+    needs:
+      - code-quality
+      - docker-test
+
+    runs-on: ubuntu-latest
+
+
+    permissions:
+
+      contents: read
+
+      pages: write
+
+      id-token: write
+
+
+
+    environment:
+
+      name: github-pages
+
+      url: ${{ steps.deployment.outputs.page_url }}
+
+
+
+    steps:
+
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+
+
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
+
         with:
-          path: '.'
+
+          path: .
+
+
 
       - name: Deploy to GitHub Pages
+
         id: deployment
+
         uses: actions/deploy-pages@v5
