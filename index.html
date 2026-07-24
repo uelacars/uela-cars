@@ -1,382 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto UELA</title>
-    <!-- Link to Css-->
-     <link rel="stylesheet" href="style.css">
-     <!-- Box Icons-->
-      <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+    <title>Auto UELA - Luxury Cars</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Navbar-->
-    <header>
-        <!-- nav container-->
-         <div class="nav container">
-            <!-- menu icon-->
-             <i class='bx bx-menu' id="menu-icon"></i>
-             <!-- logo-->
-              <a href="#" class="logo">UELA<span>CARS</span></a>
-              <!-- Nav List-->
-               <ul class="navbar">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#cars">Cars</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#motorcycle">Motorcycle</a></li>
-               </ul>
-               <!-- Search Icon-->
-                <i class='bx bx-search' id="search-icon"></i>
-                <!-- Search Box-->
-                 <div class="search-box container">
-                    <input type="search" name="" id="" placeholder="Search here ...">
-                 </div>
-         </div>
-    </header>
 
-     <!-- home-->
-      <section class="home" id="home">
-        <div class="home-text">
-            <h1>Where Taste <br> Meets <span>Quality</span></h1>
-            <a href="#" class="btn">Comfort & Quality</a>
-        </div>
-      </section>
+<header>
+    <div class="nav container">
 
-      <!-- cars section-->
-       <section class="cars" id="cars">
-       <div class="heading">
-        <span>All Cars</span>
-        <h2>- VIP Cars -</h2>
-        <p>See below</p>
-        </section>
+        <i class="bx bx-menu" id="menu-icon"></i>
 
-       </div>
+        <a href="index.html" class="logo">
+            UELA<span>CARS</span>
+        </a>
 
-       <!-- cars container-->
-        <div class="cars-container container">
-          <!-- BOX 1-->
-          <div class="box">
-            <img src="images/car1.jpg" alt="">
-            <div class="car-details">
-              <h2>Mercedes-benz GLE 63 S </h2>
-              <ul class="specs">
-                <li>Engine: 4.0 L V8 biturbo petrol</li>
-                 <li>Automatic</li>
-                  <li>2022 Model</li>
-                   <li>Max speed: 280 km/h</li>
-              </ul>
-              <button class="prize-btn"> €92,963</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
+        <ul class="navbar">
 
-          <!-- BOX 2-->
-          <div class="box">
-            <img src="images/car2.jpg" alt="">
-            <div class="car-details">
-              <h2>Mercedes-Benz E63 S</h2>
-              <ul class="specs">
-                <li>Engine: 4.0 L V8 biturbo petrol</li>
-                 <li>Automatic</li>
-                  <li>2019 Model</li>
-                   <li>Max speed: 250 km/h</li>
-              </ul>
-                <button class="prize-btn"> €90,000</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
+            <li>
+                <a href="#home" class="active">Home</a>
+            </li>
 
-          <!-- BOX 3-->
-          <div class="box">
-            <img src="images/car3.jpg" alt="">
-            <div class="car-details">
-              <h2> BMW M3 </h2>
-              <ul class="specs">
-                <li>Engine: 3.0 L twin-turbo inline-6, 473 HP</li>
-                 <li>Automatic</li>
-                  <li>2024 Model</li>
-                   <li>Max speed: 290 km/h</li>
-              </ul>
-                <button class="prize-btn"> €97,370</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
+            <li>
+                <a href="#cars">Cars</a>
+            </li>
 
-          <!-- BOX 4-->
-          <div class="box">
-            <img src="images/car4.jpg" alt="">
-            <div class="car-details">
-              <h2>BMW M4 </h2>
-              <ul class="specs">
-                <li>Engine: 3.0 L twin-turbo inline-6, 480 HP</li>
-                 <li>Automatic</li>
-                  <li>2023 Model</li>
-                   <li>Max speed: 280-290 km/h</li>
-              </ul>
-                <button class="prize-btn"> €124,900</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-          <!-- BOX 5-->
-          <div class="box">
-            <img src="images/car5.jpg" alt="">
-            <div class="car-details">
-              <h2>BMW M5 </h2>
-              <ul class="specs">
-                <li>Engine: 4.4 L twin-turbo V8, 600 HP</li>
-                 <li>Automatic</li>
-                  <li>2023 Model</li>
-                   <li>Max speed: 305 km/h</li>
-              </ul>
-                <button class="prize-btn"> €117,495</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
+            <li>
+                <a href="#motorcycle">Motorcycle</a>
+            </li>
 
-          <!-- BOX 6-->
-          <div class="box">
-            <img src="images/car6.jpg" alt="">
-            <div class="car-details">
-              <h2>Porsche 911 Carrera T Coupé</h2>
-              <ul class="specs">
-                <li>Engine: 3.0 L twin-turbo flat-six, 388 HP</li>
-                 <li>Automatic</li>
-                  <li>2024 Model</li>
-                   <li>Max speed: 295 km/h</li>
-              </ul>
-                <button class="prize-btn"> €140,000</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-
-          <!-- BOX 7-->
-          <div class="box">
-            <img src="images/car7.jpg" alt="">
-            <div class="car-details">
-              <h2>Porsche Cayenne </h2>
-              <ul class="specs">
-                <li>Engine: 3.0 L V6 Turbo</li>
-                 <li>Automatic</li>
-                  <li>2023 Model</li>
-                   <li>Max speed: 245 km/h</li>
-              </ul>
-                <button class="prize-btn"> €154,000</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-
-          <!-- BOX 8-->
-          <div class="box">
-            <img src="images/car8.jpg" alt="">
-            <div class="car-details">
-              <h2>Porsche 911 Turbo S Cabriolet </h2>
-              <ul class="specs">
-                <li>Engine: 3.7 L turbocharged flat-six (F-6)</li>
-                 <li>AWD (All-Wheel Drive)</li>
-                  <li>2023 Model</li>
-                   <li>Max speed: approx. 330 km/h</li>
-              </ul>
-                <button class="prize-btn"> €274,952</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-
-          <!-- BOX 9-->
-          <div class="box">
-            <img src="images/car9.jpg" alt="">
-            <div class="car-details">
-              <h2>Audi A4 </h2>
-              <ul class="specs">
-                <li>Engine: 2.0 L turbocharged 4-cylinder with mild-hybrid system</li>
-                 <li>Automatic S tronic, 7-speed</li>
-                  <li>2024 Model</li>
-                   <li>Max speed: approx. 250 km/h</li>
-              </ul>
-                <button class="prize-btn"> €36,668</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-
-          <!-- BOX 10-->
-          <div class="box">
-            <img src="images/car10.jpg" alt="">
-            <div class="car-details">
-              <h2>Audi A5 </h2>
-              <ul class="specs">
-                <li>Engine: 2.0 L turbocharged 4-cylinder with mild-hybrid system</li>
-                 <li>Automatic</li>
-                  <li>2023 Model</li>
-                   <li>Max speed: approx. 250 km/h</li>
-              </ul>
-                <button class="prize-btn"> €41,741</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-
-          <!-- BOX 11-->
-          <div class="box">
-            <img src="images/car11.jpg" alt="">
-            <div class="car-details">
-              <h2>Audi RS7  </h2>
-              <ul class="specs">
-                <li>Engine: 4.0 L V8 biturbo with 48V mild-hybrid system</li>
-                 <li>Automatic 8-speed Tiptronic</li>
-                  <li>2023 Model</li>
-                  <li>Max speed: 250 km/h</li>
-              </ul>
-                <button class="prize-btn"> €249,985</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-
-          <!-- BOX 12-->
-          <div class="box">
-            <img src="images/car12.jpg" alt="">
-            <div class="car-details">
-              <h2> Mercedes-Benz CLE </h2>
-              <ul class="specs">
-                <li>Engine: 2.0 L turbocharged 4-cylinder mild-hybrid</li>
-                 <li>Automatic</li>
-                  <li>2025 Model</li>
-                   <li>Max speed: approx. 250 km/h</li>
-              </ul>
-                <button class="prize-btn"> €74,300</button>
-              <button class="buy-btn"> Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- about-->
-       <section class="about container" id="about">
-         <div class="aboutfoto.png"> 
-         <img src="images/about.us.png" alt="">
-         </div>
-         
-        <div class="about-text">
-        <span>About Us</span>
-        <h2>Where Taste<br>Meets Quality</h2>
-        <p>We are dedicated to bringing the best cars and soon motorcycles to the market, combining style, performance, and reliability for every client.</p>
-        <ul class="about-features">
-          <li><i class='bx bx-check'></i> High-quality products</li>
-          <li><i class='bx bx-check'></i> Excellent customer service</li>
-          <li><i class='bx bx-check'></i> Experience and reliability</li>
         </ul>
-         <a href="#" class="btn">Comfort & Quality</a>
+
+
+        <i class="bx bx-search" id="search-icon"></i>
+
+
+        <div class="search-box container">
+
+            <input 
+            type="search"
+            placeholder="Search cars...">
+
         </div>
-        </section>
 
-        <!-- motorcycle section-->
-         <section class="motorcycle" id="motorcycle">
-          <div class="heading">
-            <span class="comming">coming soon</span>
-            <h2>New Motorcycles from UELA</h2>
-            <p>A new collection of modern and powerful motorcycles - coming soon!</p>
-          </div>
 
-           <!-- motorcycle CONTAINER-->
-           <div class="motorcycle-container container">
-            <!-- motor 1-->
-            <div class="box">
-              <div class="overlay"> Coming Soon</div>
-              <img src="images/moto1.jpg" alt="">
-              <h3>Yamaha MT-07</h3>
-              <span>€7,731</span>
-              <i class='bx bxs-star'>(6 Reviews)</i>
-              <a href="#" class="btn disabled disabled">Buy Now</a>
-            </div>
-            <!-- motor 2-->
-            <div class="box">
-              <div class="overlay"> Coming Soon</div>
-              <img src="images/moto2.jpg" alt="">
-              <h3>Kawasaki Z650</h3>
-              <span>€7,515</span>
-              <i class='bx bxs-star'>(9 Reviews)</i>
-              <a href="#" class="btn disabled">Buy Now</a>
-            </div>
-            <!-- motor 3-->
-            <div class="box">
-              <img src="images/moto3.jpg" alt="">
-              <div class="overlay"> Coming Soon</div>
-              <h3>Honda Rebel 500</h3>
-              <span>€6,209 </span>
-              <i class='bx bxs-star'>(3 Reviews)</i>
-              <a href="#" class="btn disabled">Buy Now</a>
-            </div>
-            <!-- motor 4-->
-            <div class="box">
-              <div class="overlay"> Coming Soon</div>
-              <img src="images/moto4.jpg" alt="">
-              <h3>Royal Enfield Interceptor 650</h3>
-              <span>€5,625</span>
-              <i class='bx bxs-star'>(23 Reviews)</i>
-              <a href="#" class="btn disabled">Buy Now</a>
-            </div>
-            <!-- motor 5-->
-            <div class="box">
-              <div class="overlay"> Coming Soon</div>
-              <img src="images/moto5.jpg" alt="">
-              <h3>KTM 390 Duke</h3>
-              <span>€6,660</span>
-              <i class='bx bxs-star'>(15 Reviews)</i>
-              <a href="#" class="btn disabled">Buy Now</a>
-            </div>
-            <!-- motor 6-->
-            <div class="box">
-              <div class="overlay"> Coming Soon</div>
-              <img src="images/moto6.jpg" alt="">
-              <h3>Kawasaki Eliminator 500</h3>
-              <span>€6,495</span>
-              <i class='bx bxs-star'>(77 Reviews)</i>
-              <a href="#" class="btn disabled">Buy Now</a>
-            </div>
-           </div>
-         </section>
+    </div>
+</header>
 
-         <!-- footer-container-->
-           <section class="footer">
-            <div class="footer-container container">
-              <div class="footer-box">
-                <a href="#" class="logo">UELA<span>CARS</span></a>
-                <div class="social">
-                  <a href="#">CARS</a>
-                  <a href="#">THAT</a>
-                  <a href="#">ONLY</a>
-                  <a href="#">VIP</a>
-                  <a href="#">CAN BUY!</a>
-               </div>
-               </div>
 
-              <div class="footer-box">
-                <h3>Page</h3>
-                <a href="#">Home</a>
-                <a href="#">Cars</a>
-                <a href="#">About</a>
-                <a href="#">Motorcycle</a>
-              </div>
-            
-              <div class="footer-box">
-                <h3>Legal</h3>
-                <a href="#">Privacy</a>
-                <a href="#">Refund Policy</a>
-                <a href="#">Cookie Policy</a>
-              </div>
-              
-              <div class="footer-box">
-                <h3>Contact us in KOSOVA</h3>
-                <p>Gjilan</p>
-                <p>Bujanoc</p>
-                <p>Prishtinë</p>
-              </div>
-            </div>
-           </section>
 
-         <!-- COPYRIGHT-->
-          <div class="copyright">
-            <p>&#169; Autosallon UELA CARS All Rights Reserved</p>
-          </div>
+<!-- HOME -->
 
-     <script src="main.js"></script>
-</body>
-</html>
+<section class="home" id="home">
+
+
+<div class="home-text">
+
+<h1>
+Where Taste
+<br>
+Meets
+<span>Quality</span>
+</h1>
+
+
+<a href="#cars" class="btn">
+View Cars
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- CARS -->
+
+<section class="cars" id="cars">
+
+
+<div class="heading">
+
+<span>
+Luxury Cars
+</span>
+
+
+<h2>
+VIP Cars
+</h2>
+
+
+<p>
+Choose your dream car
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="cars-container container">
+
+
+
+<!-- CAR 1 -->
+
+<a href="cars/mercedes-gle.html" class="car-link">
+
+<div class="box">
+
+
+<img 
+src="images/car1.jpg"
+alt="Mercedes-Benz GLE 63 S">
+
+
+<div class="car-details">
+
+
+<h2>
+Mercedes-Benz GLE 63 S
+</h2>
+
+
+<ul class="specs">
+
+<li>
+Engine: 4.0L V8 Biturbo
+</li>
+
+<li>
+603 HP
+</li>
+
+<li>
+2022 Model
+</li>
+
+<li>
+280 km/h
+</li>
+
+</ul>
+
+
+<button 
+type="button"
+class="prize-btn">
+
+€92,963
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</a>
+
+
+
+
+
+<!-- CAR 2 -->
+
+
+<a href="cars/mercedes-e63.html" class="car-link">
+
+
+<div class="box">
+
+
+<img
+src="images/car2.jpg"
+alt="Mercedes-Benz E63 S">
+
+
+<div class="car-details">
+
+
+<h2>
+Mercedes-Benz E63 S
+</h2>
+
+
+<ul class="specs">
+
+<li>
+Engine: 4.0L V8 Biturbo
+</li>
+
+<li>
+603 HP
+</li>
+
+<li>
+2019 Model
+</li>
+
+<li>
+250 km/h
+</li>
+
+
+</ul>
+
+
+<button
+type="button"
+class="prize-btn">
+
+€90,000
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+<!-- CAR 3 -->
+
+
+<a href="cars/bmw-m3.html" class="car-link">
+
+
+<div class="box">
+
+
+<img
+src="images/car3.jpg"
+alt="BMW M3">
+
+
+<div class="car-details">
+
+
+<h2>
+BMW M3
+</h2>
+
+
+<ul class="specs">
+
+
+<li>
+Engine: 3.0L Twin Turbo
+</li>
+
+
+<li>
+473 HP
+</li>
+
+
+<li>
+2024 Model
+</li>
+
+
+<li>
+290 km/h
+</li>
+
+
+</ul>
+
+
+<button
+type="button"
+class="prize-btn">
+
+€97,370
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+<!-- CAR 4 -->
+
+
+<a href="cars/bmw-m4.html" class="car-link">
+
+
+<div class="box">
+
+
+<img
+src="images/car4.jpg"
+alt="BMW M4">
+
+
+<div class="car-details">
+
+
+<h2>
+BMW M4
+</h2>
+
+
+<ul class="specs">
+
+<li>
+Engine: 3.0L Twin Turbo
+</li>
+
+<li>
+480 HP
+</li>
+
+<li>
+2023 Model
+</li>
+
+<li>
+290 km/h
+</li>
+
+</ul>
+
+
+<button
+type="button"
+class="prize-btn">
+
+€124,900
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</a>
+
+
+
+
+
+
+<!-- CAR 5 -->
+
+
+<a href="cars/bmw-m5.html" class="car-link">
+
+
+<div class="box">
+
+
+<img
+src="images/car5.jpg"
+alt="BMW M5">
+
+
+<div class="car-details">
+
+
+<h2>
+BMW M5
+</h2>
+
+
+<ul class="specs">
+
+<li>
+Engine: 4.4L Twin Turbo V8
+</li>
+
+<li>
+600 HP
+</li>
+
+<li>
+2023 Model
+</li>
+
+<li>
+305 km/h
+</li>
+
+
+</ul>
+
+
+<button
+type="button"
+class="prize-btn">
+
+€117,495
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</a>
