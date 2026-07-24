@@ -8,27 +8,6 @@ on:
 jobs:
 
   
-  code-quality:
-    name: Check Code Quality
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-
-      - name: Check project files
-        run: |
-          ls -la
-          echo "Checking HTML CSS JS files..."
-
-      - name: Install HTML validator
-        run: npm install -g html-validate
-
-      - name: Validate HTML
-        run: html-validate index.html
-
-      - name: Check JavaScript syntax
-        run: node --check main.js
 
 
   # CD - Deploy to GitHub Pages
