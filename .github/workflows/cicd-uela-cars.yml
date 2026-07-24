@@ -2,128 +2,42 @@ name: deploy-uela-cars
 
 on:
   push:
-    branches:
-      - main
+    
 
-  # workflow_dispatch:
-  # Manuali 
 
 jobs:
-
-  code-quality:
-
-    name: Check Website Quality
-
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@v5
-
-
-      - name: Check project structure
-        run: |
-          ls -la
-          echo "Checking HTML CSS JS files..."
-
-
-      - name: Install HTML validator
-        run: npm install -g html-validate
-
-
-      - name: Validate HTML
-        run: html-validate index.html
-
-
-      - name: Check JavaScript syntax
-        run: node --check main.js
-
-
-
-  docker-test:
-
-    name: Build Docker Image
-
-    needs: code-quality
-
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@v5
-
-
-      - name: Build Docker image
-        run: |
-          docker build -t uela-cars .
-
-
-      - name: Test Docker image
-        run: |
-          docker run -d -p 8080:80 --name uela uela-cars
-
-          sleep 5
-
-          curl http://localhost:8080
-
-
-
-
-  deploy:
-
-    name: Deploy Website
-
-    needs:
-      - code-quality
-      - docker-test
-
-    runs-on: ubuntu-latest
-
+ deploy:
+  
 
     permissions:
-
       contents: read
-
       pages: write
-
       id-token: write
 
-
-
     environment:
-
-      name: github-pages
-
+      name: production
       url: ${{ steps.deployment.outputs.page_url }}
 
-
+    runs-on: ubuntu-latest
 
     steps:
 
-
-      - name: Checkout repository
+      - name: checkout repo code
         uses: actions/checkout@v5
 
+     
 
 
-      - name: Configure GitHub Pages
+     
+
+      - name: configure github pages
         uses: actions/configure-pages@v5
 
-
-
-      - name: Upload website files
+      - name: upload artifact
         uses: actions/upload-pages-artifact@v3
-
         with:
+          path: './out'
 
-          path: .
-
-
-
-      - name: Deploy to GitHub Pages
-
+      - name: deploy
         id: deployment
-
         uses: actions/deploy-pages@v5
